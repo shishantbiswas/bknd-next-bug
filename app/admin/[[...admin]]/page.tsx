@@ -1,15 +1,18 @@
 "use client"
+import { Admin } from "./page.client";
+import { Suspense } from "react";
 import "bknd/dist/styles.css";
-import { Admin } from "bknd/ui";
 
 export default function AdminPage() {
   return (
-    <Admin
-      config={{
-        basepath: "/admin",
-        logo_return_path: "/../",
-        theme: "system",
-      }}
-    />
+    <Suspense>
+      <Admin
+        config={{
+          basepath: "/admin",
+          logo_return_path: "/../",
+          theme: "system",
+        }}
+      />
+    </Suspense>
   );
 }

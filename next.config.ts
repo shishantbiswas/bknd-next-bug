@@ -1,8 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  // webpack: (config) => {
+  //   config.optimization.minimize = false;
+  //   return config;
+  // },
+
+  experimental: {
+    turbopackMinify: false,
+  },
 };
 
 export default nextConfig;
